@@ -35,9 +35,9 @@
             align-items: center;
             padding: 10px 20px;
         }
-        /* ★ロゴ画像をメニューバーに綺麗に表示 */
+        /* ロゴ画像をメニューバーに綺麗に表示 */
         .nav-logo-img {
-            height: 40px; /* メニューバーに収まる高さに自動調整 */
+            height: 40px;
             width: auto;
             display: block;
         }
@@ -80,11 +80,12 @@
             box-sizing: border-box;
         }
         
-        /* ★画像を使ったメインビジュアル */
+        /* 画像を使ったメインビジュアル */
         header {
             text-align: center;
             padding: 220px 20px 160px 20px;
-            background: linear-gradient(rgba(11, 11, 11, 0.5), #0b0b0b), url('323036.jpg') no-repeat center center;
+            /* ファイル名を正確に指定 */
+            background: linear-gradient(rgba(11, 11, 11, 0.5), #0b0b0b), url('./323036.jpg') no-repeat center center;
             background-size: cover;
             border-bottom: 1px solid #d4af37;
             position: relative;
@@ -261,8 +262,8 @@
     <!-- 固定ナビゲーションメニュー -->
     <nav>
         <div class="nav-container">
-            <!-- テキストの代わりにアップロードしたロゴ画像を表示 -->
-            <a href="#"><img src="連絡先ＮＧのコピー (Instagramの投稿（45）).png" alt="MISTY" class="nav-logo-img"></a>
+            <!-- 特殊なファイル名を完全に一致させて呼び出し -->
+            <a href="#"><img src="./%E9%85%A3%E7%B5%A1%E5%85%88%EF%BC%AE%EF%BC%A7%E3%81%AE%E3%82%B3%E3%83%94%E3%83%BC%20%28Instagram%E3%81%AE%E6%8A%95%E7%A8%BF%EF%BC%8845%EF%BC%89%29.png" alt="MISTY" class="nav-logo-img"></a>
             <ul class="nav-menu">
                 <li><a href="#">HOME</a></li>
                 <li><a href="#system">SYSTEM</a></li>
