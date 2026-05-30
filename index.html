@@ -141,7 +141,22 @@
       margin: 15px auto 0;
     }
 
-    /* 大枠レイアウト用の暫定スタイル（後でディテール調整可能） */
+    /* ポケパラウィジェット配置用の調整エリア */
+    .widget-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    /* ウィジェット内のデザインをMISTY風に少し馴染ませるための枠設定 */
+    #pokeparaBlogWidget {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 8px;
+      padding: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+
+    /* 女の子一覧用の暫定スタイル */
     .girls-grid {
       display: flex;
       gap: 20px;
@@ -198,22 +213,6 @@
       padding: 6px 15px;
       border-radius: 20px;
       color: #e0ca90;
-    }
-
-    .news-list {
-      max-width: 600px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    .news-item {
-      border-bottom: 1px solid #222;
-      padding-bottom: 10px;
-    }
-    .news-item p {
-      margin: 5px 0 0 0;
-      font-size: 0.9rem;
     }
 
     /* システム（料金設定）の案内 */
@@ -399,24 +398,13 @@
       </div>
     </section>
 
-    <!-- 3. ブログ風・最新ニュースエリア -->
+    <!-- 3. ブログエリア（ポケパラのリアルタイムウィジェットをここに合体！） -->
     <section id="news">
       <div class="section-title">CAST BLOG</div>
-      <div class="news-list">
-        <div class="news-item">
-          <span style="font-size: 0.8rem; color: #999;">05/30 02:23</span>
-          <span style="background: #d4af37; color: #000; font-size: 0.75rem; padding: 2px 6px; border-radius: 3px; margin: 0 10px;">あまね</span>
-          <p>🐱出勤しました！まったりお待ちしてます〜</p>
-        </div>
-        <div class="news-item">
-          <span style="font-size: 0.8rem; color: #999;">05/29 23:16</span>
-          <span style="background: #d4af37; color: #000; font-size: 0.75rem; padding: 2px 6px; border-radius: 3px; margin: 0 10px;">るか</span>
-          <p>蚊に刺されました…お盆前やのにもうおる泣</p>
-        </div>
-        <div class="news-item">
-          <span style="font-size: 0.8rem; color: #999;">05/29 23:00</span>
-          <span style="background: #d4af37; color: #000; font-size: 0.75rem; padding: 2px 6px; border-radius: 3px; margin: 0 10px;">ひな</span>
-          <p>久しぶりです、！出勤してます！</p>
+      <div class="widget-wrap">
+        <!-- ポケパラから取得したMISTY専用コードやで -->
+        <div id="pokeparaBlogWidget" class="pokeparaBlogWidget" data-sid="19530" data-width="380" data-height="300" data-photo="" data-count="9" data-gid="0">
+          <script type="text/javascript" src="https://www.pokepara.jp/js/wiget/get_widget.js?date=20220414"></script>
         </div>
       </div>
     </section>
