@@ -14,6 +14,7 @@
       margin: 0;
       padding: 0;
       line-height: 1.7;
+      overflow-x: hidden; /* 横揺れ防止 */
     }
 
     /* 鯉風のメインナビゲーション（上部固定・太文字スタイル） */
@@ -67,7 +68,7 @@
       color: #e6cd83;
     }
 
-    /* 巨大なインパクトを放つメインビジュアル */
+    /* 巨大なインパクトを放つメインビジュアル＋背景の微細なズーム動き */
     header {
       text-align: center;
       padding: 260px 20px 200px 20px;
@@ -75,7 +76,13 @@
       background-size: cover;
       position: relative;
       border-bottom: 4px solid #e6cd83;
+      animation: headerZoom 10s ease-out forwards; /* 開いたときにじわっと動く */
     }
+    @keyframes headerZoom {
+      from { background-size: 105%; }
+      to { background-size: auto; }
+    }
+
     header h1 {
       font-size: 5rem;
       font-weight: 900;
@@ -83,6 +90,7 @@
       margin: 0;
       color: #ffffff;
       text-shadow: 0 0 20px rgba(0,0,0,0.9), 0 0 10px rgba(230,205,131,0.6);
+      animation: fadeInUp 1.2s ease-out;
     }
     .subtitle {
       font-size: 1.2rem;
@@ -90,6 +98,7 @@
       letter-spacing: 6px;
       margin-top: 10px;
       font-weight: bold;
+      animation: fadeInUp 1.6s ease-out;
     }
 
     /* コンテナ設定 */
@@ -103,6 +112,39 @@
     section {
       margin-bottom: 100px;
       scroll-margin-top: 80px;
+      /* スクロールで浮き上がらせるための初期状態とアニメーション設定 */
+      opacity: 0;
+      transform: translateY(40px);
+      animation: scrollFadeIn 1s ease-out forwards;
+      animation-timeline: view();
+      animation-range: entry 10% cover 40%;
+    }
+    
+    /* 最新ブラウザ向けのスクロール連動アニメーション定義 */
+    @keyframes scrollFadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ファーストビューで見える可能性のある最初のセクションは最初から出す */
+    #girls {
+      animation: fadeInUp 1.2s ease-out forwards;
+      animation-timeline: auto; 
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
     
     /* 存在感のある極太の見出しブロック */
@@ -162,6 +204,13 @@
       font-weight: bold;
       font-size: 1rem;
       letter-spacing: 1px;
+      transition: all 0.3s;
+    }
+    /* チップにホバーしたときのちょっとした動き */
+    .cast-chips span:hover {
+      background: #e6cd83;
+      color: #000;
+      transform: scale(1.05);
     }
 
     /* システム料金表スタイル */
@@ -221,6 +270,8 @@
       font-weight: bold;
       font-size: 0.95rem;
     }
+    
+    /* 求人ボタンのホバーアニメーションを強化 */
     .action-btn {
       display: inline-block;
       background: #e6cd83;
@@ -230,10 +281,13 @@
       padding: 20px 50px;
       text-decoration: none;
       letter-spacing: 2px;
-      transition: background 0.3s;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(230,205,131,0.2);
     }
     .action-btn:hover {
       background: #f3dc9b;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(230,205,131,0.4);
     }
 
     /* 店舗詳細情報 */
@@ -272,7 +326,7 @@
 </head>
 <body>
 
-  <!-- 固定ナビゲーション（メニュー名＋英語の二段構えを完全トレース） -->
+  <!-- 固定ナビゲーション -->
   <nav>
     <div class="nav-container">
       <a href="#"><img src="./logo.png" alt="MISTY" class="nav-logo-img"></a>
@@ -288,7 +342,7 @@
     </div>
   </nav>
 
-  <!-- 強烈なメインビジュアル -->
+  <!-- メインビジュアル（アクセス時、じわっとズームバックする動きを搭載） -->
   <header>
     <h1>MISTY</h1>
     <div class="subtitle">Girls Bar Oimachi</div>
@@ -296,7 +350,7 @@
 
   <div class="container">
 
-    <!-- 1. GIRLS STAFF（ポケパラのキャスト一覧をドカンと配置） -->
+    <!-- 1. GIRLS STAFF -->
     <section id="girls">
       <div class="section-title">GIRLS STAFF</div>
       <div class="section-subtitle">ガールズスタッフ</div>
@@ -307,7 +361,7 @@
       </div>
     </section>
 
-    <!-- 2. SCHEDULE（本日の出勤） -->
+    <!-- 2. SCHEDULE（スクロールすると下からスーッと出てくる） -->
     <section id="schedule">
       <div class="section-title">SCHEDULE</div>
       <div class="section-subtitle">スケジュール</div>
@@ -322,7 +376,7 @@
       </div>
     </section>
 
-    <!-- 3. CAST BLOG（ポケパラブログウィジェット） -->
+    <!-- 3. CAST BLOG -->
     <section id="news">
       <div class="section-title">CAST BLOG</div>
       <div class="section-subtitle">キャストブログ</div>
@@ -333,7 +387,7 @@
       </div>
     </section>
 
-    <!-- 4. SYSTEM（料金案内） -->
+    <!-- 4. SYSTEM -->
     <section id="system">
       <div class="section-title">SYSTEM</div>
       <div class="section-subtitle">システム</div>
@@ -344,7 +398,7 @@
       </div>
     </section>
 
-    <!-- 5. RECRUIT（求人情報） -->
+    <!-- 5. RECRUIT -->
     <section id="recruit">
       <div class="section-title">RECRUIT</div>
       <div class="section-subtitle">求人情報</div>
@@ -364,7 +418,7 @@
       </div>
     </section>
 
-    <!-- 6. ACCESS（店舗情報） -->
+    <!-- 6. ACCESS -->
     <section id="info">
       <div class="section-title">ACCESS</div>
       <div class="section-subtitle">アクセス</div>
