@@ -1,334 +1,471 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GIRLS BAR MISTY（ミスティ）| 大井町</title>
-    <style>
-        /* 全体の洗練されたスタイル設定 */
-        body {
-            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', sans-serif;
-            background-color: #0b0b0b;
-            color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-            line-height: 1.8;
-            letter-spacing: 0.05em;
-        }
-        
-        /* 固定ナビゲーションメニュー */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgba(11, 11, 11, 0.95);
-            border-bottom: 1px solid #222;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
-        }
-        .nav-container {
-            max-width: 900px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-        }
-        /* ロゴ画像をメニューバーに綺麗に表示 */
-        .nav-logo-img {
-            height: 40px;
-            width: auto;
-            display: block;
-        }
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            gap: 20px;
-            align-items: center;
-        }
-        .nav-menu a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-            transition: color 0.3s;
-        }
-        .nav-menu a:hover {
-            color: #d4af37;
-        }
-        /* 求人メニュー */
-        .nav-menu .nav-recruit {
-            color: #d4af37;
-            border: 1px solid #d4af37;
-            padding: 4px 12px;
-            border-radius: 4px;
-            transition: all 0.3s;
-        }
-        .nav-menu .nav-recruit:hover {
-            background-color: #d4af37;
-            color: #000;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GIRLS BAR MISTY（ミスティ）| 大井町</title>
+  <style>
+    /* 全体の洗練されたスタイル設定 */
+    body {
+      font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', sans-serif;
+      background-color: #0b0b0b;
+      color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+      letter-spacing: 0.05em;
+    }
 
-        .container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px;
-            box-sizing: border-box;
-        }
-        
-        /* 画像を使ったメインビジュアル */
-        header {
-            text-align: center;
-            padding: 220px 20px 160px 20px;
-            background: linear-gradient(rgba(11, 11, 11, 0.5), #0b0b0b), url('./323036.jpg') no-repeat center center;
-            background-size: cover;
-            border-bottom: 1px solid #d4af37;
-            position: relative;
-        }
-        h1 {
-            font-size: 4rem;
-            font-weight: 300;
-            letter-spacing: 12px;
-            color: #d4af37;
-            margin: 0 0 15px 0;
-            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), 0 0 10px rgba(212, 175, 55, 0.4);
-        }
-        .subtitle {
-            font-size: 1rem;
-            color: #ffffff;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            margin-bottom: 30px;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
-        }
-        .lead-text {
-            font-size: 1.15rem;
-            color: #ffffff;
-            max-width: 600px;
-            margin: 0 auto;
-            font-weight: 400;
-            text-shadow: 0 2px 15px rgba(0, 0, 0, 0.9);
-            background: rgba(0, 0, 0, 0.5);
-            padding: 15px 25px;
-            border-radius: 4px;
-            display: inline-block;
-            border: 1px solid rgba(212, 175, 55, 0.2);
-        }
+    /* 固定ナビゲーションメニュー */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(11, 11, 11, 0.95);
+      border-bottom: 1px solid #222;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+    .nav-container {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+    .nav-logo-img {
+      height: 40px;
+      width: auto;
+      display: block;
+    }
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 15px;
+      align-items: center;
+    }
+    .nav-menu a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      transition: color 0.3s;
+    }
+    .nav-menu a:hover {
+      color: #d4af37;
+    }
+    .nav-menu .nav-recruit {
+      color: #d4af37;
+      border: 1px solid #d4af37;
+      padding: 4px 12px;
+      border-radius: 4px;
+      transition: all 0.3s;
+    }
+    .nav-menu .nav-recruit:hover {
+      background-color: #d4af37;
+      color: #000;
+    }
 
-        /* セクション共通スタイル */
-        section {
-            padding: 80px 0;
-            border-bottom: 1px solid #1a1a1a;
-            scroll-margin-top: 60px;
-        }
-        .section-title {
-            text-align: center;
-            font-size: 1.6rem;
-            font-weight: 400;
-            color: #d4af37;
-            letter-spacing: 4px;
-            margin-bottom: 40px;
-            position: relative;
-        }
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 40px;
-            height: 1px;
-            background-color: #d4af37;
-            margin: 15px auto 0;
-        }
+    .container {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
 
-        /* システム（料金設定）の案内 */
-        .system-box {
-            background: #111;
-            border: 1px solid #222;
-            padding: 40px 30px;
-            text-align: center;
-            border-radius: 4px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-        }
-        .price {
-            font-size: 2.5rem;
-            color: #ffffff;
-            font-weight: 500;
-            margin: 15px 0;
-        }
-        .price span {
-            font-size: 1.2rem;
-            color: #999;
-        }
+    /* メインビジュアル */
+    header {
+      text-align: center;
+      padding: 220px 20px 160px 20px;
+      background: linear-gradient(rgba(11, 11, 11, 0.5), #0b0b0b), url('./323036.jpg') no-repeat center center;
+      background-size: cover;
+      border-bottom: 1px solid #d4af37;
+      position: relative;
+    }
+    h1 {
+      font-size: 4rem;
+      font-weight: 300;
+      letter-spacing: 12px;
+      color: #d4af37;
+      margin: 0 0 15px 0;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), 0 0 10px rgba(212, 175, 55, 0.4);
+    }
+    .subtitle {
+      font-size: 1rem;
+      color: #ffffff;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    }
+    .lead-text {
+      font-size: 1.15rem;
+      color: #ffffff;
+      max-width: 600px;
+      margin: 0 auto;
+      font-weight: 400;
+      text-shadow: 0 2px 15px rgba(0, 0, 0, 0.9);
+      background: rgba(0, 0, 0, 0.5);
+      padding: 15px 25px;
+      border-radius: 4px;
+      display: inline-block;
+      border: 1px solid rgba(212, 175, 55, 0.2);
+    }
 
-        /* 女の子向け求人エリア */
-        .recruit-banner {
-            background: linear-gradient(135deg, #1c1810 0%, #12100b 100%);
-            border: 1px solid #d4af37;
-            border-radius: 8px;
-            padding: 50px 30px;
-            text-align: center;
-            margin: 20px 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-        }
-        .recruit-tag {
-            display: inline-block;
-            background-color: #d4af37;
-            color: #000;
-            font-size: 0.8rem;
-            font-weight: bold;
-            padding: 4px 15px;
-            border-radius: 20px;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-        }
-        .recruit-title {
-            font-size: 1.6rem;
-            color: #ffffff;
-            font-weight: 400;
-            margin-bottom: 20px;
-        }
-        .recruit-features {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin: 30px 0;
-            padding: 0;
-            list-style: none;
-        }
-        .recruit-features li {
-            background: #221d15;
-            border: 1px solid #443a28;
-            padding: 8px 18px;
-            font-size: 0.95rem;
-            border-radius: 4px;
-            color: #e0ca90;
-        }
-        
-        /* 求人応募・詳細ボタン */
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #d4af37 0%, #aa8617 100%);
-            color: #000;
-            font-weight: bold;
-            font-size: 1.1rem;
-            padding: 16px 40px;
-            text-decoration: none;
-            border-radius: 4px;
-            letter-spacing: 2px;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
-            transition: all 0.3s;
-            margin-top: 15px;
-        }
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
-        }
+    /* セクション共通スタイル */
+    section {
+      padding: 80px 0;
+      border-bottom: 1px solid #1a1a1a;
+      scroll-margin-top: 60px;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: #d4af37;
+      letter-spacing: 4px;
+      margin-bottom: 40px;
+      position: relative;
+    }
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 1px;
+      background-color: #d4af37;
+      margin: 15px auto 0;
+    }
 
-        /* アクセス・店舗情報 */
-        .info-list {
-            list-style: none;
-            padding: 0;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-        .info-list li {
-            padding: 15px 0;
-            border-bottom: 1px solid #1a1a1a;
-            display: flex;
-            justify-content: space-between;
-        }
-        .info-list li span:first-child {
-            color: #d4af37;
-            font-weight: bold;
-        }
+    /* 大枠レイアウト用の暫定スタイル（後でディテール調整可能） */
+    .girls-grid {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .girl-card {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 8px;
+      width: 160px;
+      padding: 15px;
+      text-align: center;
+    }
+    .girl-img {
+      width: 100%;
+      height: 180px;
+      background: #333;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+    }
+    .girl-name {
+      font-weight: bold;
+      color: #d4af37;
+    }
+    .girl-comment {
+      font-size: 0.8rem;
+      color: #ccc;
+      margin-top: 5px;
+    }
 
-        /* フッター */
-        footer {
-            text-align: center;
-            padding: 60px 0;
-            color: #555;
-            font-size: 0.8rem;
-            border-top: 1px solid #1a1a1a;
-        }
-    </style>
+    .schedule-box {
+      background: #111;
+      border: 1px solid #222;
+      padding: 30px;
+      border-radius: 4px;
+      text-align: center;
+    }
+    .today-girls {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+    }
+    .today-girls span {
+      background: #221d15;
+      border: 1px solid #443a28;
+      padding: 6px 15px;
+      border-radius: 20px;
+      color: #e0ca90;
+    }
+
+    .news-list {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .news-item {
+      border-bottom: 1px solid #222;
+      padding-bottom: 10px;
+    }
+    .news-item p {
+      margin: 5px 0 0 0;
+      font-size: 0.9rem;
+    }
+
+    /* システム（料金設定）の案内 */
+    .system-box {
+      background: #111;
+      border: 1px solid #222;
+      padding: 40px 30px;
+      text-align: center;
+      border-radius: 4px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    .price {
+      font-size: 2.5rem;
+      color: #ffffff;
+      font-weight: 500;
+      margin: 15px 0;
+    }
+    .price span {
+      font-size: 1.2rem;
+      color: #999;
+    }
+
+    /* 女の子向け求人エリア */
+    .recruit-banner {
+      background: linear-gradient(135deg, #1c1810 0%, #12100b 100%);
+      border: 1px solid #d4af37;
+      border-radius: 8px;
+      padding: 50px 30px;
+      text-align: center;
+      margin: 20px 0;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    }
+    .recruit-tag {
+      display: inline-block;
+      background-color: #d4af37;
+      color: #000;
+      font-size: 0.8rem;
+      font-weight: bold;
+      padding: 4px 15px;
+      border-radius: 20px;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .recruit-title {
+      font-size: 1.6rem;
+      color: #ffffff;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+    .recruit-features {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin: 30px 0;
+      padding: 0;
+      list-style: none;
+    }
+    .recruit-features li {
+      background: #221d15;
+      border: 1px solid #443a28;
+      padding: 8px 18px;
+      font-size: 0.95rem;
+      border-radius: 4px;
+      color: #e0ca90;
+    }
+
+    /* 求人応募・詳細ボタン */
+    .cta-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #d4af37 0%, #aa8617 100%);
+      color: #000;
+      font-weight: bold;
+      font-size: 1.1rem;
+      padding: 16px 40px;
+      text-decoration: none;
+      border-radius: 4px;
+      letter-spacing: 2px;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+      transition: all 0.3s;
+      margin-top: 15px;
+    }
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+    }
+
+    /* アクセス・店舗情報 */
+    .info-list {
+      list-style: none;
+      padding: 0;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .info-list li {
+      padding: 15px 0;
+      border-bottom: 1px solid #1a1a1a;
+      display: flex;
+      justify-content: space-between;
+    }
+    .info-list li span:first-child {
+      color: #d4af37;
+      font-weight: bold;
+    }
+
+    /* フッター */
+    footer {
+      text-align: center;
+      padding: 60px 0;
+      color: #555;
+      font-size: 0.8rem;
+      border-top: 1px solid #1a1a1a;
+    }
+  </style>
 </head>
 <body>
 
-    <!-- 固定ナビゲーションメニュー -->
-    <nav>
-        <div class="nav-container">
-            <!-- 名前をシンプルにしたlogo.pngを呼び出し -->
-            <a href="#"><img src="./logo.png" alt="MISTY" class="nav-logo-img"></a>
-            <ul class="nav-menu">
-                <li><a href="#">HOME</a></li>
-                <li><a href="#system">SYSTEM</a></li>
-                <li><a href="#info">ACCESS</a></li>
-                <li><a href="#recruit" class="nav-recruit">RECRUIT</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- メインビジュアル -->
-    <header>
-        <h1>MISTY</h1>
-        <div class="subtitle">Girls Bar Oimachi</div>
-        <p class="lead-text">大井町駅すぐ、洗練された空間で心地よいひとときを。<br>シックなインテリアと落ち着いた雰囲気のガールズバーです。</p>
-    </header>
-
-    <div class="container">
-        
-        <!-- システムセクション -->
-        <section id="system">
-            <div class="section-title">SYSTEM</div>
-            <div class="system-box">
-                <p>初めてのお客様でも安心して楽しめる明瞭会計です。</p>
-                <div class="price">¥2,500 <span>/ 40min</span></div>
-                <p style="color: #999; font-size: 0.9rem;">各種ドリンク・ボトルメニューも豊富に取り揃えております。</p>
-            </div>
-        </section>
-
-        <!-- 求人案内セクション -->
-        <section id="recruit">
-            <div class="section-title">RECRUIT</div>
-            <div class="recruit-banner">
-                <div class="recruit-tag">女の子アルバイト募集</div>
-                <div class="recruit-title">MISTYで、新メンバーとして一緒に働きませんか？</div>
-                <p style="color: #ccc; font-size: 0.95rem; max-width: 600px; margin: 0 auto;">
-                    当店は「100%店内業務」「罰金・ノルマ一切なし」の完全クリーンなお店です。ナイトワーク未経験の学生さんやOLさんが、学校や会社帰りにいつもの私服のまま、安心して楽しく稼げる環境を整えています。
-                </p>
-                
-                <ul class="recruit-features">
-                    <li>時給 2,500円〜 ＋ 各種高額バック</li>
-                    <li>完全私服勤務（ドレス不要）</li>
-                    <li>客引き・ビラ配り一切なし</li>
-                    <li>全額日払いOK</li>
-                </ul>
-                
-                <!-- LINE応募へのリンクボタン -->
-                <a href="https://line.me/R/ti/p/@あなたのLINEのID" class="cta-button">求人の詳細・体験入店はこちら</a>
-            </div>
-        </section>
-
-        <!-- アクセス・店舗情報セクション -->
-        <section id="info">
-            <div class="section-title">SHOP INFO</div>
-            <ul class="info-list">
-                <li><span>店名</span> <span>Girls Bar MISTY（ミスティ）</span></li>
-                <li><span>営業時間</span> <span>20:00 〜 翌5:00</span></li>
-                <li><span>定休日</span> <span>年中無休（年末年始を除く）</span></li>
-                <li><span>アクセス</span> <span>大井町駅 から徒歩スグ</span></li>
-            </ul>
-        </section>
-
+  <!-- 固定ナビゲーションメニュー -->
+  <nav>
+    <div class="nav-container">
+      <a href="#"><img src="./logo.png" alt="MISTY" class="nav-logo-img"></a>
+      <ul class="nav-menu">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#girls">GIRLS</a></li>
+        <li><a href="#schedule">SCHEDULE</a></li>
+        <li><a href="#news">BLOG</a></li>
+        <li><a href="#system">SYSTEM</a></li>
+        <li><a href="#info">ACCESS</a></li>
+        <li><a href="#recruit" class="nav-recruit">RECRUIT</a></li>
+      </ul>
     </div>
+  </nav>
 
-    <footer>
-        &copy; 2026 MISTY All Rights Reserved.
-    </footer>
+  <!-- メインビジュアル -->
+  <header>
+    <h1>MISTY</h1>
+    <div class="subtitle">Girls Bar Oimachi</div>
+    <p class="lead-text">大井町駅すぐ、洗練された空間で心地よいひとときを。<br>シックなインテリアと落ち着いた雰囲気のガールズバーです。</p>
+  </header>
+
+  <div class="container">
+
+    <!-- 1. ガールズスタッフ一覧 -->
+    <section id="girls">
+      <div class="section-title">GIRLS STAFF</div>
+      <p style="text-align: center; color: #999;">MISTY自慢のキャスト陣をご紹介します。</p>
+      
+      <div class="girls-grid">
+        <div class="girl-card">
+          <div class="girl-img">Photo</div>
+          <div class="girl-name">ひな (21)</div>
+          <div class="girl-comment">「楽しくお話ししましょ！」</div>
+        </div>
+        <div class="girl-card">
+          <div class="girl-img">Photo</div>
+          <div class="girl-name">るか (23)</div>
+          <div class="girl-comment">「お酒大好きです✨」</div>
+        </div>
+        <div class="girl-card">
+          <div class="girl-img">Photo</div>
+          <div class="girl-name">あまね (22)</div>
+          <div class="girl-comment">「まったり飲みましょ〜🐱」</div>
+        </div>
+        <div class="girl-card">
+          <div class="girl-img">Photo</div>
+          <div class="girl-name">のどか (20)</div>
+          <div class="girl-comment">「ワイワイ喋るの得意です！」</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. 本日の出勤・スケジュール -->
+    <section id="schedule">
+      <div class="section-title">TODAY'S SCHEDULE</div>
+      <div class="schedule-box">
+        <p style="color: #d4af37; font-weight: bold; margin-bottom: 20px;">本日 05/30 の出勤メンバー</p>
+        <div class="today-girls">
+          <span>ひな</span>
+          <span>るか</span>
+          <span>あまね</span>
+          <span>のどか</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. ブログ風・最新ニュースエリア -->
+    <section id="news">
+      <div class="section-title">CAST BLOG</div>
+      <div class="news-list">
+        <div class="news-item">
+          <span style="font-size: 0.8rem; color: #999;">05/30 02:23</span>
+          <span style="background: #d4af37; color: #000; font-size: 0.75rem; padding: 2px 6px; border-radius: 3px; margin: 0 10px;">あまね</span>
+          <p>🐱出勤しました！まったりお待ちしてます〜</p>
+        </div>
+        <div class="news-item">
+          <span style="font-size: 0.8rem; color: #999;">05/29 23:16</span>
+          <span style="background: #d4af37; color: #000; font-size: 0.75rem; padding: 2px 6px; border-radius: 3px; margin: 0 10px;">るか</span>
+          <p>蚊に刺されました…お盆前やのにもうおる泣</p>
+        </div>
+        <div class="news-item">
+          <span style="font-size: 0.8rem; color: #999;">05/29 23:00</span>
+          <span style="background: #d4af37; color: #000; font-size: 0.75rem; padding: 2px 6px; border-radius: 3px; margin: 0 10px;">ひな</span>
+          <p>久しぶりです、！出勤してます！</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. システムセクション -->
+    <section id="system">
+      <div class="section-title">SYSTEM</div>
+      <div class="system-box">
+        <p>初めてのお客様でも安心して楽しめる明瞭会計です。</p>
+        <div class="price">¥2,500 <span>/ 40min</span></div>
+        <p style="color: #999; font-size: 0.9rem;">各種ドリンク・ボトルメニューも豊富に取り揃えております。</p>
+      </div>
+    </section>
+
+    <!-- 5. 求人案内セクション -->
+    <section id="recruit">
+      <div class="section-title">RECRUIT</div>
+      <div class="recruit-banner">
+        <div class="recruit-tag">女の子アルバイト募集</div>
+        <div class="recruit-title">MISTYで、新メンバーとして一緒に働きませんか？</div>
+        <p style="color: #ccc; font-size: 0.95rem; max-width: 600px; margin: 0 auto;">
+          当店は「100%店内業務」「罰金・ノルマ一切なし」の完全クリーンなお店です。ナイトワーク未経験の学生さんやOLさんが、学校や会社帰りにいつもの私服のまま、安心して楽しく稼げる環境を整えています。
+        </p>
+        <ul class="recruit-features">
+          <li>時給 2,500円〜 ＋ 各種高額バック</li>
+          <li>完全私服勤務（ドレス不要）</li>
+          <li>客引き・ビラ配り一切なし</li>
+          <li>全額日払いOK</li>
+        </ul>
+        <a href="https://line.me/R/ti/p/@あなたのLINEのID" class="cta-button">求人の詳細・体験入店はこちら</a>
+      </div>
+    </section>
+
+    <!-- 6. アクセス・店舗情報セクション -->
+    <section id="info">
+      <div class="section-title">SHOP INFO</div>
+      <ul class="info-list">
+        <li><span>店名</span> <span>Girls Bar MISTY（ミスティ）</span></li>
+        <li><span>営業時間</span> <span>20:00 〜 翌5:00</span></li>
+        <li><span>定休日</span> <span>年中無休（年末年始を除く）</span></li>
+        <li><span>アクセス</span> <span>大井町駅 から徒歩スグ</span></li>
+      </ul>
+    </section>
+
+  </div>
+
+  <footer>
+    &copy; 2026 MISTY All Rights Reserved.
+  </footer>
 
 </body>
 </html>
